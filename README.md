@@ -4,38 +4,67 @@ You will have to find the following information and test them as you go along in
 
 ## Level 1
 
-- Which are the different primitive data types in TypeScript?
-  The different primitive data are: string, number, boolean, symbol, null and undefined.
+- Which are the different primitive data types in TypeScript? --> precicer le nombre et les principales
+  The different primitive data are: string, number, boolean, symbol, null, undefined and bigint.
+  Les principales:string, number, boolean, null, undefined.
 
 - How to type an Array?
   The array is declared: --> let nameOfArray : typeOfArray[] = [input value of array]
+  TS infere the array, TS understand it's an array when i write --> let nameOfArray=[input a value (possibility with different type)].
 
 - What is the `any` type?
   The any type is the all of type; after the value is defined, the type is defined.
+  Never use any (sinon il n'y aura pas d'erreur de type de détecté).
 
 - How to type the return of a function as well as the type of its parameters?
-  I can return the function with on function "return ..." and the type after () (():input type of return).
+  I can return the function with on function "return ..." and the type after parenthesis() --> nameOfClass():input type of return.
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
 ## Level 2
 
-- What is a class?
-- What is a class constructor?
-- What is a class instance?
+- What is a class? --> créée la boîte typée qui peut ê réutilisée? --> traduire!
+  The class is façon de définir la forme d'un objet, moyen de regrouper des données, des fonctionnalités et de definir une structure à des objets
+  For use when i want use. Ajout de type, de visibilité vis à vis de JS.
+
+- What is a class constructor? --> autorise la construction d'objet, enregistre la boîte? stock?
+  The constructor methode qui initialise les propriétés(attributs) de l'objet crée dans la classe, c'est lui qui est appelé lors de la création d'une instance et il offre aussi la possibilité de personnaliser l'état initial de l'objet
+  Just one constructor on one class
+  ex: je px modifier l'élement [0] d'un array an ecrivant thi.name[0]= name("cerise"), ce qui vient remplacer mon pomme par example.
+
+- What is a class instance? --> creation d'un objet ma boite class specifique
+  It is the instanciation and she can phone a method.
+
 - How to check that a class is of a certain instance?
+  I can check this when my mouse hover on my class with VSC; or with a console.log( nomDeLaSousBoite instanceOf nomDeLaClasse)
+  When it's ok, return true.
+
 - What is `this` in a class?
+  Allow to refer to, to selected
+  The 'this' init the properties, for take into account
+
 - What is a class method?
+  She can influence the properties of instances
+
 - What is the visibility of properties?
+  The visibility determinate the accessibilty of the attribut.
+
 - What is the difference between `public`, `private` and `protected`?
+  This properties defined the visibility of the attribut.
+  public= access everywhere of class
+  private= access uniquely in class (not possible with the child)
+  protected= access in class and in child of his parents'class
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
 ## Level 3
 
 - How to split our program into different files? (e.g. a class in a file that I import into another)
+  I can split my program on different files with the export and import instruction; with precise on the concernate class.
 - What is the `export` keyword?
+  It is the instruction are whrite in the class to take
 - What is the `import` keyword?
+  It is the instruction
 - What's inheritance?
 - How to call the constructor of a parent class?
 - How to call a method of a parent class?
@@ -123,4 +152,5 @@ _Edit the `attack` method of `Hero` so that the damage is calculated as follows:
 **_Bonus 2 : User interface_**
 
 _Create a user interface for the application (for example, with a choice of heroes and weapons, and a visual on the damage inflicted)_
+
 # BRIEF-TimeScript
