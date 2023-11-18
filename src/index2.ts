@@ -10,7 +10,7 @@ export class Fleurs {
   /*ajout du constructeur*/
   constructor(nom: string, nombreDePetales: number) {
     this.nom =
-      nom; /*le this vient initialiser les attributs, les prendre en compte*/
+      nom; /*le this vient initialiser les attributs, les prendre en compte, le "nom" apres le this est forcement le nom de ma classe, mais celui donné pt ê different */
     this.nombreDePetales = nombreDePetales;
   }
 
@@ -34,7 +34,7 @@ console.log(
 
 //7th and 8th question
 /*modificateur d'acces donc visibilité des attributs -->création d'un nvl classe pour donner des modificateurs aux attributs*/
-class Eleve {
+export class Eleve {
   public nom: string;
   private age: number;
   protected niveau: string;

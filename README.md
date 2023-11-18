@@ -2,73 +2,148 @@
 
 You will have to find the following information and test them as you go along in your program to experiment and understand how TypeScript will help you write your best code!
 
-## Level 1
+### LEVEL 1
 
-- Which are the different primitive data types in TypeScript? --> precicer le nombre et les principales
-  The different primitive data are: string, number, boolean, symbol, null, undefined and bigint.
-  Les principales:string, number, boolean, null, undefined.
+- ## Which are the different primitive data types in TypeScript?
 
-- How to type an Array?
-  The array is declared: --> let nameOfArray : typeOfArray[] = [input value of array]
-  TS infere the array, TS understand it's an array when i write --> let nameOfArray=[input a value (possibility with different type)].
+  The different 7 primitiveS data types are: string, number, boolean, symbol, null, undefined and bigint.
+  The mains are string, number, boolean, null, undefined.
 
-- What is the `any` type?
+- ## How to type an Array?
+
+  The array is declared when i write:  
+   let nameOfArray : typeOfArray[] = [input value of array]
+
+  TS infere the array, TS understand it's an array when i write:  
+   let nameOfArray: [input a value (possibility with the different type on the array but not recommanded)]
+  or  
+   let nameOfArrays: Array<string> = ["value", "value", "valuee"]
+
+- ## What is the `any` type?
+
   The any type is the all of type; after the value is defined, the type is defined.
-  Never use any (sinon il n'y aura pas d'erreur de type de détecté).
+  Never use any (otherwise there will be no detected type error) NB:les erreurs de type ne seront pas détectées
 
-- How to type the return of a function as well as the type of its parameters?
-  I can return the function with on function "return ..." and the type after parenthesis() --> nameOfClass():input type of return.
+- ## How to type the return of a function as well as the type of its parameters?
+
+  I can return the function with on the function "return ..operation will be desirate.." and specify the type after parenthesis of the name to the class:
+
+  nameOfClass():input type of return
+
+![Alt text](image.png)
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
-## Level 2
+### LEVEL 2
 
-- What is a class? --> créée la boîte typée qui peut ê réutilisée? --> traduire!
-  The class is façon de définir la forme d'un objet, moyen de regrouper des données, des fonctionnalités et de definir une structure à des objets
-  For use when i want use. Ajout de type, de visibilité vis à vis de JS.
+- ## What is a class? --> NB: créér la boîte typée qui peut ê réutilisée
 
-- What is a class constructor? --> autorise la construction d'objet, enregistre la boîte? stock?
-  The constructor methode qui initialise les propriétés(attributs) de l'objet crée dans la classe, c'est lui qui est appelé lors de la création d'une instance et il offre aussi la possibilité de personnaliser l'état initial de l'objet
-  Just one constructor on one class
-  ex: je px modifier l'élement [0] d'un array an ecrivant thi.name[0]= name("cerise"), ce qui vient remplacer mon pomme par example.
+  The class define a structur to object, and her features. She regroup data. Contrary to JS, TS add a type of attribut.
+  It's like a blueprint( NB: c'est le plan, il le faut pr faire une maison mais tu ne peux pas habiter dedans ce dernier, idem recette).
 
-- What is a class instance? --> creation d'un objet ma boite class specifique
+  ![Alt text](image-1.png)
+
+- ## What is a class constructor? --> autorise la construction d'objet, enregistre la boîte? stock?
+
+  The constructor is a particulare method to initializes the properties (attributes) of the object created in the class; it is he who is called when creating an instance. It also offers the possibility of customizing the initial state of the object (NB: je px modifier l'élement [0] d'un array an ecrivant this.name[0]= name("cerise"), ce qui vient remplacer l'élement [0])
+  Just one constructor on one class. I can't rename constructor.
+
+  Where? I write the constructor in the class, just after creation of the class.
+
+  How do i write it?  
+   constructor(nomQueL'OnVeutDonnerAl'AttributDsLeConstructeur: typeDeAttribut, etc. idem autres attributs){
+  this.nomDeLaClasse = nomQueL'OnVeutDonnerAl'AttributDsLeConstructeur;
+  this.nomDeLaClasse = nomQueL'OnVeutDonnerAl'AttributDsLeConstructeur;  
+  etc.
+  }
+
+  ![Alt text](image-2.png)
+
+- ## What is a class instance? --> NB: creation d'un objet dans ma boite class specifique
+
   It is the instanciation and she can phone a method.
 
-- How to check that a class is of a certain instance?
-  I can check this when my mouse hover on my class with VSC; or with a console.log( nomDeLaSousBoite instanceOf nomDeLaClasse)
+  Where? I write the instance just after the parent class
+
+  How do i write it?
+
+  ![Alt text](image-3.png)
+
+- ## How to check that a class is of a certain instance?
+
+  I can check this when my mouse hover on my class with VSC (et ça s'affiche); or with a "console.log". Pour trier des resultats par ex.
+
+  How do i write it?
+
+  console.log( nomDeLaSousBoite instanceOf nomDeLaClasse);
+
   When it's ok, return true.
 
-- What is `this` in a class?
-  Allow to refer to, to selected
-  The 'this' init the properties, for take into account
+  Where?
 
-- What is a class method?
-  She can influence the properties of instances
+  Outside the class.
 
-- What is the visibility of properties?
+- ## What is `this` in a class?
+
+  Allow to refer to, to selected; select just this instance, this object. In the method of my class.
+  The 'this' init the properties, for take into account. The 'this' is on the constructor.
+
+- ## What is a class method?
+
+  She can influence the properties of instances, action of object; Differecen function/method: the function work without perso while methode is function like to an object; function has not link with object.
+
+  Where?  
+  I write the method in the class, after the constructor.
+
+  How do i write it?
+
+  ![Alt text](image-4.png)
+
+- ## What is the visibility of properties?
+
   The visibility determinate the accessibilty of the attribut.
 
-- What is the difference between `public`, `private` and `protected`?
-  This properties defined the visibility of the attribut.
-  public= access everywhere of class
-  private= access uniquely in class (not possible with the child)
-  protected= access in class and in child of his parents'class
+- ## What is the difference between `public`, `private` and `protected`?
+
+This properties defined the visibility of the attribut.
+public= access everywhere of class
+private= access uniquely in class (not possible with the child)
+protected= access in class and in child of his parents'class
+
+Where?  
+ I write this in the class, after the name of the attribute.
+
+How do i write it?
+
+![Alt text](image-5.png)
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
-## Level 3
+### LEVEL 3
 
-- How to split our program into different files? (e.g. a class in a file that I import into another)
+- ## How to split our program into different files? (e.g. a class in a file that I import into another)
+
   I can split my program on different files with the export and import instruction; with precise on the concernate class.
-- What is the `export` keyword?
-  It is the instruction are whrite in the class to take
-- What is the `import` keyword?
-  It is the instruction
-- What's inheritance?
-- How to call the constructor of a parent class?
-- How to call a method of a parent class?
-- What is polymorphism?
+
+- ## What is the `export` keyword?
+
+  It is the instruction are write in the class where i take
+
+- ## What is the `import` keyword?
+
+  It is the instruction to write in the classe who takes
+
+- ## What's inheritance?
+
+  The inheritance is a child of an class manage outside the parent'class; it's for extend a class. It's possible with a constructor.
+
+- ## How to call the constructor of a parent class?
+
+  In the constructor, write super() to indicate it's relate un the parent'class
+
+- ## How to call a method of a parent class?
+
+- ## What is polymorphism?
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
