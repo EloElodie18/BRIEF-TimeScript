@@ -36,7 +36,7 @@ You will have to find the following information and test them as you go along in
 
 ### LEVEL 2
 
-- ## What is a class? --> NB: créér la boîte typée qui peut ê réutilisée
+- ## What is a class? --> NB: créer la boîte typée qui peut ê réutilisée
 
   The class define a structur to object, and her features. She regroup data. Contrary to JS, TS add a type of attribut.
   It's like a blueprint( NB: c'est le plan, il le faut pr faire une maison mais tu ne peux pas habiter dedans ce dernier, idem recette).
@@ -48,13 +48,16 @@ You will have to find the following information and test them as you go along in
   The constructor is a particulare method to initializes the properties (attributes) of the object created in the class; it is he who is called when creating an instance. It also offers the possibility of customizing the initial state of the object (NB: je px modifier l'élement [0] d'un array an ecrivant this.name[0]= name("cerise"), ce qui vient remplacer l'élement [0])
   Just one constructor on one class. I can't rename constructor.
 
-  Where? I write the constructor in the class, just after creation of the class.
+  #Where?  
+   I write the constructor in the class, just after creation of the class.
 
-  How do i write it?  
+  #How do i write it?  
    constructor(nomQueL'OnVeutDonnerAl'AttributDsLeConstructeur: typeDeAttribut, etc. idem autres attributs){
+
   this.nomDeLaClasse = nomQueL'OnVeutDonnerAl'AttributDsLeConstructeur;
   this.nomDeLaClasse = nomQueL'OnVeutDonnerAl'AttributDsLeConstructeur;  
   etc.
+
   }
 
   ![Alt text](image-2.png)
@@ -63,9 +66,10 @@ You will have to find the following information and test them as you go along in
 
   It is the instanciation and she can phone a method.
 
-  Where? I write the instance just after the parent class
+  #Where?  
+   I write the instance just after the parent class
 
-  How do i write it?
+  #How do i write it?
 
   ![Alt text](image-3.png)
 
@@ -73,13 +77,13 @@ You will have to find the following information and test them as you go along in
 
   I can check this when my mouse hover on my class with VSC (et ça s'affiche); or with a "console.log". Pour trier des resultats par ex.
 
-  How do i write it?
+  #How do i write it?
 
   console.log( nomDeLaSousBoite instanceOf nomDeLaClasse);
 
   When it's ok, return true.
 
-  Where?
+  #Where?
 
   Outside the class.
 
@@ -92,10 +96,10 @@ You will have to find the following information and test them as you go along in
 
   She can influence the properties of instances, action of object; Differecen function/method: the function work without perso while methode is function like to an object; function has not link with object.
 
-  Where?  
+  #Where?  
   I write the method in the class, after the constructor.
 
-  How do i write it?
+  #How do i write it?
 
   ![Alt text](image-4.png)
 
@@ -105,17 +109,23 @@ You will have to find the following information and test them as you go along in
 
 - ## What is the difference between `public`, `private` and `protected`?
 
-This properties defined the visibility of the attribut.
-public= access everywhere of class
-private= access uniquely in class (not possible with the child)
-protected= access in class and in child of his parents'class
+  This properties defined the visibility of the attribut.
 
-Where?  
- I write this in the class, after the name of the attribute.
+  public= access everywhere of class
 
-How do i write it?
+  private= access uniquely in class (not possible with the child)
 
-![Alt text](image-5.png)
+  protected= access in class and in child of his parents'class
+
+  When i don't precise a modified access to an attribut, the attribut is public.
+
+  #Where?
+
+  I Write this in the class, after the name of the attribute.
+
+  #How do i write it?
+
+  ![Alt text](image-5.png)
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
@@ -123,27 +133,99 @@ How do i write it?
 
 - ## How to split our program into different files? (e.g. a class in a file that I import into another)
 
-  I can split my program on different files with the export and import instruction; with precise on the concernate class.
+  I can split my program on different files with the export and import instruction; with precise on the concernate class. It's is for organise a project and have a better readability.
 
 - ## What is the `export` keyword?
 
-  It is the instruction are write in the class where i take
+  It is the instruction are write in the class where i take. It's for open the element of an files access.
+
+  #Where?
+
+  In the class where i can take.
+
+  #How do i it?
+
+  ![Alt text](image-6.png)
 
 - ## What is the `import` keyword?
 
-  It is the instruction to write in the classe who takes
+  It is the instruction to write in the classe who takes.
+
+  #Where?
+
+  In the class who wants to take.
+
+  #How do i write it?
+
+  ![Alt text](image-7.png)
 
 - ## What's inheritance?
 
-  The inheritance is a child of an class manage outside the parent'class; it's for extend a class. It's possible with a constructor.
+  The inheritance is a child of an main class for a objet programation; it's a extend of a parent'class(main class). This means that the child'class benefit to the properties of the parent'class(attibut and method).
+
+  #Where?
+
+  It's manage outside the parent'class but in the same file, same page.
+
+  #How do i write it?
+
+  I write this with the "extend" instruction, you can see in this picture:
+
+  ![Alt text](image-8.png)
 
 - ## How to call the constructor of a parent class?
 
-  In the constructor, write super() to indicate it's relate un the parent'class
+I call the constructor of the parent'class with the "super()" instruction.
+
+#Where?
+
+In the constructor of the child'class.
+
+#How do i write it?
+
+![Alt text](image-9.png)
 
 - ## How to call a method of a parent class?
 
+I can call a method of a parent same a function.
+
+#Where?
+
+It's possible outside the class.
+
+#How do i write it?
+
+nomDeObjet.nomDeLaMethode();
+
+![Alt text](image-10.png)
+
 - ## What is polymorphism?
+
+The polymorphism is an possiblity to use the object. He permit to uniformiz the object when he has a same common elements (example: a child method can use in a parent'class or a same name attrribut can have a differents type value).  
+There is 2 polymorphism:
+
+- The static polymorphism:
+  When a class have a many method with same name but the type of value is different.
+  #Where?
+  In the class.
+
+  #How do i write it?
+
+  See the example:
+
+  ![Alt text](image-11.png)
+
+  When i write the good value in the console.log, he permite to interprate the tow type of value.
+
+- The dinamic polymorphism:
+  Quels sont les possibilités que donne le polymorphisme?
+
+  #Where?
+  Outside the class, when i declare my object.
+
+  #How do i write it?
+
+  ![Alt text](image-12.png)
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
