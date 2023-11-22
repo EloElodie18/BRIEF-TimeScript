@@ -7,8 +7,8 @@
     "start": "nodemon ./src/index.ts",
     "start2": "nodemon ./src/index2.ts",
     "start3": "nodemon ./src/index3.ts",
-    "start4": "nodemon ./src/index4.ts"
-
+    "start4": "nodemon ./src/Hero.ts",
+    "start4-2": "nodemon ./src/Weapon.ts"
   },
   "keywords": [],
   "author": "",
